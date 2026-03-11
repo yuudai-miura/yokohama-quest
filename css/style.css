@@ -1,0 +1,1085 @@
+@charset "utf-8";
+
+/* フォント設定 */
+h1 {
+    font-family: "Kosugi Maru", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(32px, 6vw, 64px);
+}
+
+h2 {
+    font-family: "Kosugi Maru", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(22px, 4vw, 32px);
+}
+
+h3 {
+    font-family: "Kosugi Maru", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(18px, 3vw, 24px);
+}
+
+button {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: var(--white);
+}
+
+li,
+p,
+summary {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    list-style: none;
+}
+
+.important-matters li {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+}
+
+.check-point-heading {
+    font-family: "Kosugi Maru", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+}
+
+:root {
+    /* カラー設定 */
+    --main-color: #F7C5D1;
+    --very-pale-pink: #fff4f8;
+    --rogue-pink: #f7a1c4;
+    --yellow: #ffe26c;
+    --red: #ca2121;
+    --black: #000000;
+    --white: #ffffff;
+}
+
+
+/* 共通設定 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+section {
+    scroll-margin-top: clamp(64px, 7vw, 80px);
+}
+
+section,
+footer {
+    width: min(92%, 1200px);
+    margin: clamp(16px, 4vw, 48px) auto;
+    padding: clamp(16px, 4vw, 48px);
+    border-radius: 20px;
+    background: var(--very-pale-pink);
+}
+
+.container {
+    padding: clamp(24px, 5vw, 48px) 0;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    background: var(--white);
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 48px);
+    max-width: 1000px;
+}
+
+.heading {
+    min-width: 220px;
+    width: fit-content;
+    padding: 4px 24px;
+    height: 48px;
+    margin: 0 auto 48px;
+    border-radius: 20px;
+    background: var(--rogue-pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 背景画像の固定 */
+body {
+    background: url("../images/background.png") no-repeat;
+    background-position: right bottom 0px;
+    background-size: cover;
+    padding-top: clamp(56px, 7vw, 80px);
+    background-attachment: scroll;
+}
+
+/*  */
+
+
+/* 背景の桜画像 */
+/* テキスト */
+.text-petal img:nth-of-type(1) {
+    position: absolute;
+    bottom: 100px;
+    left: 50px;
+}
+
+.text-petal img:nth-of-type(2) {
+    position: absolute;
+    bottom: 50px;
+    left: 500px;
+}
+
+.text-petal img:nth-of-type(3) {
+    position: absolute;
+    bottom: 80px;
+    left: 850px;
+}
+
+.text-petal img:nth-of-type(4) {
+    position: absolute;
+    top: -80px;
+    left: -100px;
+}
+
+/* ストーリー＆イベント */
+.event-petal img:nth-of-type(1) {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+}
+
+.event-petal img:nth-of-type(2) {
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    transform: rotate(90deg);
+}
+
+.event-petal img:nth-of-type(3) {
+    position: absolute;
+    bottom: 300px;
+    right: 150px;
+}
+
+.event-petal img:nth-of-type(4) {
+    position: absolute;
+    bottom: 10px;
+    left: 400px;
+    transform: rotate(90deg);
+}
+
+.event-petal img:nth-of-type(5) {
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+}
+
+/* キット */
+#kit-container img:nth-of-type(1) {
+    position: absolute;
+    bottom: 200px;
+    left: 200px;
+}
+
+#kit-container img:nth-of-type(2) {
+    position: absolute;
+    top: 100px;
+    right: 200px;
+    transform: rotate(90deg);
+}
+
+#kit-container img:nth-of-type(3) {
+    position: absolute;
+    bottom: 80px;
+    left: 850px;
+    transform: rotate(90deg);
+}
+
+#kit-container img:nth-of-type(4) {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+}
+
+
+/* プレイ */
+.play-petal img:nth-of-type(1) {
+    position: absolute;
+    top: 50px;
+    left: 150px;
+}
+
+.play-petal img:nth-of-type(2) {
+    position: absolute;
+    bottom: 300px;
+    left: 150px;
+}
+
+.play-petal img:nth-of-type(3) {
+    position: absolute;
+    top: 200px;
+    left: 850px;
+    transform: rotate(90deg);
+}
+
+.play-petal img:nth-of-type(4) {
+    position: absolute;
+    bottom: -80px;
+    right: -100px;
+}
+
+/* クリア報酬 */
+.clear-petal img:nth-of-type(1) {
+    position: absolute;
+    top: 50px;
+    left: 150px;
+}
+
+.clear-petal img:nth-of-type(2) {
+    position: absolute;
+    bottom: 0px;
+    left: 200px;
+    transform: rotate(90deg);
+}
+
+.clear-petal img:nth-of-type(3) {
+    position: absolute;
+    top: 0px;
+    right: 150px;
+    transform: rotate(90deg);
+}
+
+.clear-petal img:nth-of-type(4) {
+    position: absolute;
+    top: -80px;
+    left: -90px;
+}
+
+/* チェックポイント＆所要時間 */
+.check-point-petal img:nth-of-type(1) {
+    position: absolute;
+    top: 400px;
+    left: 250px;
+}
+
+.check-point-petal img:nth-of-type(2) {
+    position: absolute;
+    bottom: 500px;
+    right: 250px;
+    transform: rotate(90deg);
+}
+
+.check-point-petal img:nth-of-type(3) {
+    position: absolute;
+    bottom: 120px;
+    left: 170px;
+}
+
+.check-point-petal img:nth-of-type(4) {
+    position: absolute;
+    bottom: -80px;
+    right: -90px;
+}
+
+/* faq */
+.faq-petal img:nth-of-type(1) {
+    position: absolute;
+    top: 50px;
+    left: 150px;
+}
+
+.faq-petal img:nth-of-type(2) {
+    position: absolute;
+    bottom: 100px;
+    left: 600px;
+    transform: rotate(90deg);
+}
+
+.faq-petal img:nth-of-type(3) {
+    position: absolute;
+    top: 200px;
+    right: 200px;
+    transform: rotate(90deg);
+}
+
+.faq-petal img:nth-of-type(4) {
+    position: absolute;
+    top: -80px;
+    left: -90px;
+}
+
+/* フッター */
+.footer-petal img:nth-of-type(1) {
+    position: absolute;
+    top: -20px;
+    left: 100px;
+}
+
+.footer-petal img:nth-of-type(2) {
+    position: absolute;
+    bottom: -20px;
+    right: 80px;
+    transform: rotate(90deg);
+}
+
+.footer-petal img:nth-of-type(3) {
+    position: absolute;
+    bottom: -120px;
+    right: -200px;
+}
+
+
+/* グローバルメニュー */
+header {
+    width: 100%;
+    background-color: var(--rogue-pink);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.gnav-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: clamp(56px, 7vw, 80px);
+    padding: 0 clamp(20px, 5vw, 120px);
+
+
+}
+
+.gnav-logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.gnav-logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+.gnav-text {
+    gap: 32px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.gnav-text a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.scroll-link:hover {
+    color: var(--white);
+    transition: 0.5s ease 0s;
+
+}
+
+
+/* ハンバーガーメニュー */
+.hamburger_btn {
+    display: none;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.hamburger_btn span {
+    position: absolute;
+    left: 10px;
+    width: 24px;
+    height: 3px;
+    background: var(--white);
+    transition: 0.3s;
+}
+
+.hamburger_btn span:nth-child(1) {
+    top: 14px;
+}
+
+.hamburger_btn span:nth-child(2) {
+    top: 21px;
+}
+
+.hamburger_btn span:nth-child(3) {
+    top: 28px;
+}
+
+.header.open .hamburger_btn span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 21px;
+}
+
+.header.open .hamburger_btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.header.open .hamburger_btn span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 21px;
+}
+
+
+/* メインビジュアル */
+.hero {
+    min-height: 70vh;
+    height: auto;
+    padding: clamp(40px, 8vw, 120px) 0;
+    background: url(../images/mainvisual.png) no-repeat;
+    z-index: 9999;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-content: center center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.25),
+            rgba(255, 255, 255, 0.55));
+}
+
+.hero-visual {
+    width: min(92vw, 1000px);
+    height: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    place-content: center center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-visual h3 {
+    line-height: 48px;
+}
+
+
+.day {
+    margin: clamp(16px, 4vw, 48px);
+}
+
+.scroll button {
+    padding: 14px 28px;
+    width: auto;
+    height: auto;
+    background: var(--rogue-pink);
+    border-radius: 10px;
+}
+
+/* テキスト */
+.lead-text {
+    width: min(92%, 900px);
+    padding: clamp(16px, 4vw, 28px);
+    text-align: center;
+    line-height: 1.9;
+}
+
+.lead-text.container {
+    margin: 0 auto;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.lead-text i {
+    color: var(--red);
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+
+/* イベント概要 */
+.story {
+    position: relative;
+}
+
+.story-text {
+    line-height: 2em;
+    margin-bottom: 48px;
+}
+
+.story dl {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 32px;
+}
+
+.event-item {
+    width: min(100%, 260px);
+    height: auto;
+    padding: 16px;
+    background: var(--white);
+    box-shadow: 3px 3px 5px;
+    border-radius: 20px;
+    place-content: center center;
+}
+
+.event-item dt {
+    margin-bottom: 16px;
+    font-weight: 700;
+    ;
+}
+
+/* キット */
+#kit-container {
+    position: relative;
+}
+
+.kit-inner ul h3::before {
+    content: url(../images/petal.png);
+    margin-right: 1em;
+    vertical-align: middle;
+}
+
+.kit-inner ul {
+    margin-bottom: 3rem;
+}
+
+.kit-inner ul li {
+    line-height: 2rem;
+    margin: 0 50px;
+}
+
+.kit-inner ul span {
+    display: inline-block;
+    margin-left: 8.5rem;
+}
+
+.important-matters {
+    display: flex;
+    justify-content: end;
+}
+
+.buy-button {
+    display: flex;
+    justify-content: center;
+}
+
+.buy-button button {
+    width: 216px;
+    height: 64px;
+    background: var(--rogue-pink);
+    border-radius: 10px;
+}
+
+/* あそび方 */
+.play {
+    position: relative;
+}
+
+.play ol {
+    line-height: 3rem;
+    margin-bottom: 48px;
+}
+
+.play ol li:nth-of-type(1)::before {
+    content: url(../images/No.1.png);
+    margin-right: 1em;
+    vertical-align: middle;
+}
+
+.play ol li:nth-of-type(2)::before {
+    content: url(../images/No.2.png);
+    margin-right: 1em;
+    vertical-align: middle;
+}
+
+.play ol li:nth-of-type(3)::before {
+    content: url(../images/No.3.png);
+    margin-right: 1em;
+    vertical-align: middle;
+}
+
+.play ol li:nth-of-type(4)::before {
+    content: url(../images/No.4.png);
+    margin-right: 1em;
+    vertical-align: middle;
+}
+
+.play ol li:nth-of-type(5)::before {
+    content: url(../images/No.5.png);
+    margin-right: 1em;
+    vertical-align: middle;
+}
+
+/* 必要なもの */
+.play table {
+    margin: 0 auto;
+}
+
+.play th {
+    padding: clamp(12px, 3vw, 32px);
+    text-align: start;
+}
+
+.play th::before {
+    content: url(../images/petal.png);
+    margin-right: 1em;
+    vertical-align: middle;
+}
+
+/* クリア報酬 */
+.clear-reward {
+    position: relative;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: clamp(16px, 3vw, 32px);
+    align-items: stretch;
+}
+
+.card-inner {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .08);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card-inner:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .15);
+}
+
+.card-img {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-text {
+    padding-top: 26px;
+    text-align: center;
+}
+
+/* チェックポイント＆所要時間 */
+.check-point-heading {
+    width: fit-content;
+    max-width: 100%;
+    height: auto;
+    padding: 10px 16px;
+    margin: 0 auto 48px;
+    border-radius: 20px;
+    background: var(--rogue-pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.3;
+    text-align: center;
+}
+
+
+.check-point {
+    position: relative;
+}
+
+.check-point-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: clamp(12px, 3vw, 32px);
+    margin: 24px;
+}
+
+.check-point-item .content {
+    min-width: 0;
+}
+
+.number {
+    background: var(--rogue-pink);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 32px;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 43px;
+}
+
+.check-point-item:nth-child(1) .number {
+    background-color: var(--yellow);
+}
+
+.check-point-item:nth-child(7) .number {
+    background: var(--yellow);
+}
+
+.photo {
+    margin-left: clamp(0px, 4vw, 64px);
+    max-width: 100%;
+    height: auto;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease;
+}
+
+.check-point-item.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* よくある質問 */
+.faq {
+    position: relative;
+}
+
+.summary {
+    padding: 8px 0;
+}
+
+.answer {
+    padding: 0 clamp(1rem, 4vw, 4rem);
+    overflow: hidden;
+}
+
+.summary::before {
+    content: url(../images/petal.png);
+    padding-right: 1em;
+    vertical-align: middle;
+}
+
+/* フッター */
+.footer-contact {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.footer-contact table {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.footer-contact dl {
+    max-width: 520px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-contact dt {
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+.footer-contact dd {
+    margin: 4px 0 0;
+}
+
+
+
+/* レスポンシブ対応（768px以下） */
+@media (max-width: 768px) {
+
+    section,
+    footer {
+        max-width: 100%;
+        margin: 16px auto;
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .container {
+        padding: 16px 0;
+        border-radius: 16px;
+    }
+
+    .wrapper {
+        margin: 0 16px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .gnav-inner {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .gnav-text {
+        position: fixed;
+        top: clamp(56px, 7vw, 80px);
+        left: 0;
+        width: 100%;
+        height: calc(100vh - clamp(56px, 7vw, 80px));
+        background: var(--white);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 24px 0;
+
+        transform: translateX(100%);
+        transition: transform .3s ease;
+    }
+
+    .header.open .gnav-text {
+        transform: translateX(0);
+    }
+
+    .hamburger_btn {
+        display: block;
+        width: 36px;
+        height: 40px;
+    }
+
+    section {
+        scroll-margin-top: 96px;
+    }
+
+    .hero {
+        min-height: 100svh;
+        padding: 24px 0;
+        background-position: center top;
+        background-size: cover;
+    }
+
+    .hero-visual {
+        width: min(92vw, 520px);
+        padding: 18px 14px;
+        border-radius: 18px;
+        gap: 10px;
+    }
+
+    .hero-visual h1 {
+        font-size: clamp(26px, 7vw, 34px);
+        line-height: 1.2;
+        word-break: keep-all;
+    }
+
+    .hero-visual h2 {
+        font-size: clamp(14px, 4vw, 18px);
+        line-height: 1.4;
+    }
+
+    .hero-visual .day h3 {
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 4px 0;
+    }
+
+    .scroll button {
+        width: min(100%, 280px);
+        padding: 12px 16px;
+        font-size: 16px;
+    }
+
+    .lead-text {
+        line-height: 1.7;
+        padding: 14px 12px;
+    }
+
+    .lead-text p {
+        font-size: 15px;
+    }
+
+    .day {
+        margin: 16px 0;
+    }
+
+
+    .story dl {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .event-item {
+        width: 100%;
+        height: auto;
+    }
+
+    .kit-inner ul li {
+        margin: 0 0 0 16px;
+    }
+
+    .kit-inner ul span {
+        margin-left: 0;
+    }
+
+    .play table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 8px;
+    }
+
+    .play th {
+        display: block;
+        width: 100%;
+        padding: 12px 12px;
+    }
+
+    .check-point-heading {
+        font-size: 18px;
+        height: auto;
+        padding: 10px 16px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .card-inner {
+        max-width: 520px;
+        margin: 0 auto;
+        padding: 16px;
+    }
+
+    .card-text {
+        padding-top: 12px;
+    }
+
+    .check-point-item {
+        display: grid;
+
+        grid-template-columns: 48px 1fr;
+        grid-template-areas:
+            "num content"
+            "img img";
+
+        align-items: start;
+        gap: 10px;
+        margin: 16px 0;
+        padding: 16px;
+        background: var(--white);
+        border-radius: 16px;
+    }
+
+    .check-point-item .number {
+        grid-area: num;
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+        margin-top: 2px;
+    }
+
+    .check-point-item .content {
+        grid-area: content;
+        min-width: 0;
+        word-break: keep-all;
+        overflow-wrap: anywhere;
+        line-height: 1.35;
+    }
+
+    .check-point-item .content h3 {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .check-point-item .time {
+        font-size: 14px;
+        margin-top: 4px;
+    }
+
+    .check-point-item .photo {
+        grid-area: img;
+        width: min(280px, 100%);
+        margin: 12px auto 0;
+        display: block;
+        border-radius: 50%;
+
+    }
+
+    .footer-contact {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+        width: min(92%, 720px);
+        margin: 0 auto;
+    }
+
+    .footer-contact table {
+        max-width: 100%;
+    }
+
+    .footer-contact td {
+        font-size: 14px;
+        padding: 10px 6px;
+    }
+
+    /* -------------------------
+     花びら装飾：スマホで画面外に飛びやすいので非表示推奨
+  ------------------------- */
+    .text-petal,
+    .event-petal,
+    .play-petal,
+    .clear-petal,
+    .check-point-petal,
+    .faq-petal,
+    .footer-petal,
+    #kit-container .kit-container {
+        display: none;
+    }
+}
